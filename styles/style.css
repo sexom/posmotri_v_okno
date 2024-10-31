@@ -8,6 +8,10 @@
   white-space: nowrap;
 }
 
+fieldset {
+  border: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -58,14 +62,11 @@ ol {
   align-items: flex-end;
   /* margin-top: 133px; */
   gap: 30px;
-
 }
 
 .result {
   padding-top: 78px;
 }
-
-
 
 .content__details {
   width: 100%;
@@ -87,15 +88,16 @@ ol {
 
 .result__video-container {
   position: relative;
-  min-width: 711px;
+  /* min-width: 711px; */
+  min-width: 721px;
   min-height: 386px;
   padding-bottom: 16px;
-  object-fit: contain;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 /* БОКОВОЙ КОНТЕНТ */
@@ -139,6 +141,11 @@ ol {
   font-weight: 700;
   line-height: 30px;
   text-align: left;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 190px;
 }
 
 .content__video-card-description {
@@ -148,6 +155,7 @@ ol {
   font-weight: 400;
   line-height: 16.2px;
   text-align: left;
+  max-width: 200px; 
 }
 
 .content__accent {
@@ -169,23 +177,16 @@ ol {
   outline: none;
 }
 
-.content__list-item:hover 
-.content__video-card-description {
+.content__card-link:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.content__list-item:hover 
-.content__video-card-title {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.content__list-item:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__list-item:focus-within {
+.content__card-link:focus-within {
   outline: 1px solid #fff;
 }
 
@@ -203,12 +204,8 @@ ol {
   padding-bottom: 5px;
 }
 
-fieldset {
-  border: 0;
-}
-
 .search-form__textfield {
-  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -240,6 +237,8 @@ fieldset {
   display: inline-flex;
   column-gap: 15px;
   align-items: center;
+  margin-bottom: 5px;
+  margin-left: 3px;
 }
 
 .search-form__pseudo-checkbox {
@@ -283,8 +282,6 @@ fieldset {
   outline: 1px solid #fff;
 }
 
-
-
 /* КНОПКИ */
 
 .button {
@@ -308,11 +305,6 @@ fieldset {
   block-size: 34px;
   inline-size: 100%;
   text-wrap: nowrap;
-}
-
-.more-button-template {
-  position: sticky;
-  top: 0;
 }
 
 .button:focus {
